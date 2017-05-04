@@ -14,6 +14,7 @@
 		2A76CE691EBB8C66006D0182 /* PokemonSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A76CE681EBB8C66006D0182 /* PokemonSearchViewController.swift */; };
 		2A76CE6B1EBB8D1B006D0182 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A76CE6A1EBB8D1B006D0182 /* NetworkController.swift */; };
 		2A76CE711EBB8DAC006D0182 /* DMNPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A76CE701EBB8DAC006D0182 /* DMNPokemon.m */; };
+		2A76CE741EBB94AD006D0182 /* DMNPokemonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A76CE731EBB94AD006D0182 /* DMNPokemonController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		2A76CE6E1EBB8DAC006D0182 /* PokedexHybrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PokedexHybrid-Bridging-Header.h"; sourceTree = "<group>"; };
 		2A76CE6F1EBB8DAC006D0182 /* DMNPokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNPokemon.h; sourceTree = "<group>"; };
 		2A76CE701EBB8DAC006D0182 /* DMNPokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNPokemon.m; sourceTree = "<group>"; };
+		2A76CE721EBB94AD006D0182 /* DMNPokemonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNPokemonController.h; sourceTree = "<group>"; };
+		2A76CE731EBB94AD006D0182 /* DMNPokemonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNPokemonController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 		2A76CE651EBB8B32006D0182 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A76CE721EBB94AD006D0182 /* DMNPokemonController.h */,
+				2A76CE731EBB94AD006D0182 /* DMNPokemonController.m */,
 			);
 			name = ModelControllers;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 				2A76CE691EBB8C66006D0182 /* PokemonSearchViewController.swift in Sources */,
 				2A76CE521EBB8B04006D0182 /* AppDelegate.swift in Sources */,
 				2A76CE6B1EBB8D1B006D0182 /* NetworkController.swift in Sources */,
+				2A76CE741EBB94AD006D0182 /* DMNPokemonController.m in Sources */,
 				2A76CE711EBB8DAC006D0182 /* DMNPokemon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

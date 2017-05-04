@@ -3,3 +3,4 @@
 //
 
 #import "DMNPokemon.h"
+#import "DMNPokemonController.h" 

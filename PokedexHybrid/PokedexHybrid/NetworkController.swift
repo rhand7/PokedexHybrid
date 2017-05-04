@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NetworkController {
+class NetworkController: NSObject {
     
     enum HTTPMethod: String {
         case get = "GET"
@@ -18,11 +18,16 @@ class NetworkController {
         case delete = "DELETE"
     }
     
-    static func performRequest(for url: URL,
-                               httpMethod: HTTPMethod,
-                               urlParameters: [String:String]? = nil,
+    @objc static func performRequest(for url: URL,
+                               httpMethodString: String,
+                               urlParameters: [String: String]? = nil,
                                body: Data? = nil,
                                completion: ((Data?, Error?) -> Void)? = nil) {
+        
+        guard let httpMethod = HTTPMethod(rawValue: httpMethodString) else {
+            completion?(nil, NSError(domain: "PokedexError", code: 0, userInfo: nil))
+            return
+        }
         
         let requestURL = self.url(byAdding: urlParameters, to: url)
         var request = URLRequest(url: requestURL)
