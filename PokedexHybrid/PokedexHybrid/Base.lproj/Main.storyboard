@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QI3-I5-wmt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Pokemon Search View Controller-->
+        <scene sceneID="w6k-4F-Sbz">
+            <objects>
+                <viewController id="QI3-I5-wmt" customClass="PokemonSearchViewController" customModule="PokedexHybrid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jY5-aQ-a89"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ao-3Z-Xyg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="al0-n5-dSk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iC0-TO-laL">
+                                <rect key="frame" x="87.5" y="273" width="200" height="121.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih4-UW-x7V">
+                                        <rect key="frame" x="77.5" y="0.0" width="45" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4k-72-LZc">
+                                        <rect key="frame" x="92" y="50.5" width="16.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM7-0U-nTD">
+                                        <rect key="frame" x="70" y="101" width="60.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2fR-AQ-vFj"/>
+                                </constraints>
+                            </stackView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3vs-Lh-ur3">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iC0-TO-laL" firstAttribute="centerX" secondItem="al0-n5-dSk" secondAttribute="centerX" id="46I-p6-INS"/>
+                            <constraint firstAttribute="trailing" secondItem="3vs-Lh-ur3" secondAttribute="trailing" id="RBD-EW-ntu"/>
+                            <constraint firstItem="3vs-Lh-ur3" firstAttribute="top" secondItem="jY5-aQ-a89" secondAttribute="bottom" id="cvC-Pu-uWq"/>
+                            <constraint firstItem="3vs-Lh-ur3" firstAttribute="leading" secondItem="al0-n5-dSk" secondAttribute="leading" id="kqR-Hh-45S"/>
+                            <constraint firstItem="iC0-TO-laL" firstAttribute="centerY" secondItem="al0-n5-dSk" secondAttribute="centerY" id="t4S-Of-kKd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="abilitiesLabel" destination="mM7-0U-nTD" id="NUs-UI-hLl"/>
+                        <outlet property="idLabel" destination="a4k-72-LZc" id="kPB-2p-z8v"/>
+                        <outlet property="nameLabel" destination="ih4-UW-x7V" id="M8A-NV-II7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u7n-bv-OTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="146"/>
+        </scene>
+    </scenes>
 </document>
