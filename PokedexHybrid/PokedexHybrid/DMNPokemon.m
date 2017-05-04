@@ -13,11 +13,11 @@
 // Must override init b/c in obj-c you can call its base init to create a nil obj. But in swift you cannot.
 - (instancetype)init
 {
-    return [self initWithName:@"" identifiere:0 abilities:@[]];
+    return [self initWithName:@"" identifier:0 abilities:@[]];
 }
 
 // Designated init
-- (instancetype)initWithName:(NSString *)name identifiere:(NSInteger)identifier abilities:(NSArray<NSString *> *)abilities
+- (instancetype)initWithName:(NSString *)name identifier:(NSInteger)identifier abilities:(NSArray<NSString *> *)abilities
 {
     self = [super init];
     if (self) {
